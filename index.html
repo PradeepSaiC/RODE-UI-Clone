@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RODE UI Clone</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            screens:{
+                sm:'640px',
+                md:'768px',
+                lg:'1024px',
+            },
+            extend: {
+              colors: {
+                myBlack:'#000',
+                myWhite:'#fff',
+              }
+            }
+          }
+        }
+      </script>
+      <script src="https://kit.fontawesome.com/7666683bf3.js" crossorigin="anonymous"></script>
+</head>
+<body class="font-['Inter',sans-serif]" >
+    <!-- navbar -->
+    <section class="relative">
+        <div class="top-0 right-0 left-0 fixed">
+            <nav class="px-3 h-[6vh] md:h-[10vh] flex justify-between items-center bg-myWhite  md:px-10 lg:px-28">
+                <div class="flex gap-2 items-center w-28 md:hidden"> 
+                    <i class="cursor-pointer fa-solid fa-bars"></i>
+                    <h3>
+                    <i class="mr-1 fa-solid fa-location-dot"></i>
+    
+                        EN<i class="cursor-pointer ml-2 fa-solid fa-caret-down"></i>
+                    </h3>
+                </div>
+                <div  class="w-28 flex justify-center">
+                    <img src="./assets/logo.png" alt="">
+                </div>
+                <div class="hidden text-sm md:flex md:gap-8 ">
+                    <a class="hover:underline cursor-pointer" href="#">PRODUCTS</a>
+                    <a class="hover:underline cursor-pointer" href="#">SOLUTIONS</a>
+                    <a class="hover:underline cursor-pointer" href="#">APPS</a>
+                    <a class="hover:underline cursor-pointer" href="#">USER GUIDES</a>
+                    <a class="hover:underline cursor-pointer" href="#">SUPPORT</a>
+                </div>
+                <div class="w-24 flex justify-end">
+                    <i class="cursor-pointer fa-solid fa-magnifying-glass"></i>
+                </div>
+            </nav>
+        </div>
+           
+    </section>
+    <!-- hero section for screens smaller than md -->
+    <section class="bg-myBlack pb-6 lg:hidden">
+        <div class="w-full">
+            <img class="w-full mx-auto mt-[-5px]" src="./assets/hero-img-mob.jpg" alt="hero image">
+            <img class="mx-auto w-[86%]" src="./assets/hero-logo.png" alt="hero logo">
+        </div>
+        <div class="mt-4 text-center text-myWhite">
+            <h1 class="text-[28px] leading-[32px] font-medium">
+                WITH RØDECASTER PRO II & <br/>RØDECASTER DUO
+            </h1>
+            <p class="my-4 mb-8 text-[rgba(255,255,255,.5)]">
+                Score a free pair of professional studio monitor <br/>headphones for a limited time.
+            </p>
+            <a class="rounded-3xl border border-2 border-myWhite hover:bg-myBlack hover:text-myWhite py-2 px-6 text-medium text-myBlack text-lg bg-myWhite" href="#">
+                SHOP RØDECASTER
+            </a>
+        </div>
+    </section>
+    <!-- lg-hero-section  -->
+    <section style="background-image: url(./assets/hero-lg.jpg); background-position: center center; background-repeat: no-repeat;" class="hidden h-[100vh] bg-myBlack lg:block">
+        <div class="w-1/2 h-full ml-auto flex flex-col justify-center">
+            <div class="w-full mt-[50px]">
+                <img class="mx-auto w-[50%]" src="./assets/hero-logo.png" alt="hero logo">
+            </div>
+            <div class="mt-10 text-center text-myWhite">
+                <h1 class="text-4xl font-medium">
+                    WITH RØDECASTER PRO II & <br/>RØDECASTER DUO
+                </h1>
+                <p class="my-6 mb-10 text-2xl text-[rgba(255,255,255,.5)]">
+                    Score a free pair of professional studio monitor <br/>headphones for a limited time.
+                </p>
+                <a class="rounded-3xl border border-2 border-myWhite hover:bg-myBlack hover:text-myWhite py-2 px-6 text-medium text-myBlack text-2xl bg-myWhite" href="#">
+                    SHOP RØDECASTER
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- interview section  -->
+    <section class="lg:hidden">
+        <div class="w-full">
+            <img class="w-full" src="./assets/mike-mob.png" alt="mike image">
+        </div>
+        <div class="text-center mt-4">
+            <h2 class="uppercase text-5xl font-bold">interview <span class="text-myWhite bg-[#ad9970] px-2 rounded">Pro</span></h2>
+            <h3 class="text-2xl font-medium mt-4">
+                Pristine Wireless Audio in <br/>Your Hands
+            </h3>
+            <p class="text-[rgba(0,0,0,.7)] mt-4 mb-4">
+                The Interview PRO is a broadcast-quality <br/>handheld wireless microphone with 32-bit float <br/>on-board recording and intelligent GainAssist <br/>technology – ideal for capturing professional <br/>audio in a wide range of content creation, media <br/>and broadcast applications.
+            </p>
+            <div class="flex gap-6 justify-center mt-6 items-center">
+                <a class="uppercase text-[rgba(0,0,0,.7)] cursor-pointer" href="#">
+                    learn more <i class="ml-2 fa-solid fa-greater-than"></i>
+                </a>
+                <a class="uppercase px-6 py-2 border-2 border-myBlack text-myWhite text-lg rounded-3xl font-semibold bg-myBlack hover:bg-myWhite hover:text-myBlack" href="#">
+                    pre-order
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- interview section large  -->
+    <section style="background-image: url(./assets/mile-lg.jpg); background-position:center center; background-repeat: no-repeat;;" class="hidden lg:block h-[100vh]  w-full">
+        <div class="text-center h-[100vh] w-1/2 flex flex-col ml-auto justify-center">
+            <h2 class="uppercase text-6xl font-bold">interview <span class="text-myWhite bg-[#ad9970] px-2 rounded">Pro</span></h2>
+            <h3 class="text-4xl font-medium mt-10">
+                Pristine Wireless Audio in Your Hands
+            </h3>
+            <p class="text-[rgba(0,0,0,.7)] text-lg mt-4 mb-4">
+                The Interview PRO is a broadcast-quality handheld wireless <br/>microphone with 32-bit float on-board recording and intelligent <br/>GainAssist technology – ideal for capturing professional audio in a <br/>wide range of content creation, media <br/>and broadcast applications.
+            </p>
+            <div class="flex gap-6 justify-center mt-6 items-center">
+                <a class="uppercase text-[rgba(0,0,0,.7)] cursor-pointer" href="#">
+                    learn more <i class="ml-2 fa-solid fa-greater-than"></i>
+                </a>
+                <a class="uppercase px-6 py-2 border-2 border-myBlack text-myWhite text-lg rounded-3xl font-semibold bg-myBlack hover:bg-transparent hover:text-myBlack" href="#">
+                    pre-order
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- services section  -->
+    <section class="bg-myBlack mt-5 pb-6 lg:hidden">
+        <div class="w-full">
+            <img class="w-full" src="./assets/services-img1.png" alt="services img">
+        </div>
+        <div class="text-center mt-4 text-myWhite">
+            <img src="./assets/service-logo1.svg" alt="service-logo1">
+
+            <h3 class="text-3xl font-medium mt-8">
+                Level Up Your Mobile <br/>Content
+            </h3>
+            <p class="text-[rgba(255,255,255,.7)] mt-4 mb-6 text-lg">
+                Rugged, lightweight and ultra-versatile <br/>filmmaking accessories designed to elevate your <br/>content.
+            </p>
+            <div class=" mt-10 ">
+                <a class="uppercase px-6 py-2 border-2 border-myWhite text-myBlack text-lg rounded-3xl font-semibold bg-myWhite hover:bg-myBlack hover:text-myWhite" href="#">
+                    mounts & grips
+                </a>
+            </div>
+        </div>
+        <!-- second -->
+        <div class="mt-10 w-full">
+            <img class="w-full" src="./assets/services-img2.png" alt="services img">
+        </div>
+        <div class="text-center mt-4 text-myWhite">
+            <img class="px-5 mx-auto" src="./assets/services-logo2.png" alt="service-logo2">
+
+            <h3 class="text-3xl font-medium mt-8">
+                Your Podcast Starts Here
+            </h3>
+            <p class="text-[rgba(255,255,255,.7)] mt-4 mb-6 text-lg">
+                Our industry-leading range of podcasting <br/>equipment offers everything you need to record <br/>a podcast start-to-finish, from microphones, <br/>studio arms and headphones to complete, all-in-<br/>one production studios.
+            </p>
+            <div class=" mt-10 ">
+                <a class="uppercase px-6 py-2 border-2 border-myWhite text-myBlack text-lg rounded-3xl font-semibold bg-myWhite hover:bg-myBlack hover:text-myWhite" href="#">
+                    explore the range
+                </a>
+            </div>
+        </div>
+        <!-- third  -->
+        <div class="mt-10 w-full">
+            <img class="w-full" src="./assets/services-img3.png" alt="services img">
+        </div>
+        <div class="text-center py-5 text-myBlack bg-myWhite">
+            <img class="px-5" src="./assets/service-logo3.svg" alt="service-logo3">
+
+            <h3 class="text-3xl font-medium mt-8">
+                The Most Powerful Wireless <br/>Mic Ever
+            </h3>
+            <p class="text-[rgba(0,0,0,.7)] mt-4 mb-6 text-lg">
+                The Wireless PRO is the ultimate wireless<br/>solution, packed full of powerful features like 32-<br/>bit float, timecode and GainAssist that offer <br/>incredible flexibility for recording pristine audio <br/>for your content.
+            </p>
+            <div class="flex gap-6 justify-center mt-6 items-center">
+                <a class="uppercase text-[rgba(0,0,0,.7)] cursor-pointer" href="#">
+                    learn more <i class="ml-2 fa-solid fa-greater-than"></i>
+                </a>
+                <a class="uppercase px-6 py-2 border-2 border-myBlack text-myWhite text-lg rounded-3xl font-semibold bg-myBlack hover:bg-myWhite hover:text-myBlack" href="#">
+                    buy now
+                </a>
+            </div>
+        </div>
+        <!-- fourth -->
+        <div class="w-full">
+            <img class="w-full" src="./assets/services-img4.png" alt="services img">
+        </div>
+        <div class="text-center mt-4 text-myWhite">
+            <img class="px-5" src="./assets/service-logo4.svg" alt="service-logo4">
+
+            <h3 class="text-3xl font-medium mt-8">
+                Your New Go-to Studio Mic
+            </h3>
+            <p class="text-[rgba(255,255,255,.7)] mt-4 mb-6 text-lg">
+                The NT1 Signature Series is a workhorse studio <br/>condenser microphone with a warm, silky <br/>character, exceptionally low noise and high SPL <br/>handling – ideal in a wide range of studio <br/>applications.
+            </p>
+            <div class="flex gap-6 justify-center mt-6 items-center">
+                <a class="uppercase text-[rgba(255,255,255,.7)] cursor-pointer" href="#">
+                    learn more <i class="ml-2 fa-solid fa-greater-than"></i>
+                </a>
+                <a class="uppercase px-6 py-2 border-2 border-myWhite text-myBlack text-lg rounded-3xl font-semibold bg-myWhite hover:bg-myBlack hover:text-myWhite" href="#">
+                    buy now
+                </a>
+            </div>
+        </div>
+        <!-- fifth -->
+        <div class="mt-10 w-full">
+            <img class="w-full" src="./assets/services-img5.png" alt="services img">
+        </div>
+        <div class="text-center py-5 text-myBlack bg-myWhite">
+            <img class="px-5" src="./assets/service-logo5.svg" alt="service-logo5">
+
+            <h3 class="text-3xl font-medium mt-8">
+                The Perfect Desktop Mount
+            </h3>
+            <p class="text-[rgba(0,0,0,.7)] mt-4 mb-6 text-lg">
+                The DS2 is a compact desktop studio arm that's ideal for perfectly positioning your microphone, camera, smartphone, light and other accessories on your desktop.
+            </p>
+            <div class="flex gap-6 justify-center mt-6 items-center">
+                <a class="uppercase text-[rgba(0,0,0,.7)] cursor-pointer" href="#">
+                    learn more <i class="ml-2 fa-solid fa-greater-than"></i>
+                </a>
+                <a class="uppercase px-6 py-2 border-2 border-myBlack text-myWhite text-lg rounded-3xl font-semibold bg-myBlack hover:bg-myWhite hover:text-myBlack" href="#">
+                    buy now
+                </a>
+            </div>
+        </div>
+        <!-- sisth -->
+        <div class="w-full">
+            <img class="w-full" src="./assets/services-img6.png" alt="services img">
+        </div>
+        <div class="text-center mt-4 text-myWhite">
+            <img class="px-5" src="./assets/service-logo6.svg" alt="service-logo6">
+
+            <h3 class="text-3xl font-medium mt-8">
+                Small Size. Stunning Sound.
+            </h3>
+            <p class="text-[rgba(255,255,255,.7)] mt-4 mb-6 text-lg">
+                The VideoMicro II is an ultra-compact and easy-<br/>to-use microphone that will instantly elevate your <br/>camera or smartphone audio, perfect for <br/>filmmaking, content creation, home videos, and <br/>more.
+            </p>
+            <div class="flex gap-6 justify-center mt-6 items-center">
+                <a class="uppercase text-[rgba(255,255,255,.7)] cursor-pointer" href="#">
+                    learn more <i class="ml-2 fa-solid fa-greater-than"></i>
+                </a>
+                <a class="uppercase px-6 py-2 border-2 border-myWhite text-myBlack text-lg rounded-3xl font-semibold bg-myWhite hover:bg-myBlack hover:text-myWhite" href="#">
+                    buy now
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- services-section lg  -->
+    <!-- one  -->
+   <section style="background-image: url(./assets/services-img1-lg.jpg); background-position: center center; background-repeat: no-repeat;" class="hidden lg:block h-[100vh] w-full ">
+    <div class="text-center text-myWhite mr-[50%] flex flex-col justify-center items-center h-[100vh] ">
+        <img  class="w-[60%]" src="./assets/service-logo1.svg" alt="service-logo1">
+        <h3 class="text-3xl font-medium mt-8">
+            Level Up Your Mobile Content
+        </h3>
+        <p class="text-[rgba(255,255,255,.7)] mt-4 mb-6 text-lg">
+            Rugged, lightweight and ultra-versatile <br/>filmmaking accessories designed to elevate your <br/>content.
+        </p>
+        <div class=" mt-6 ">
+            <a class="uppercase px-6 py-2 border-2 border-myWhite text-myBlack text-lg rounded-3xl font-semibold bg-myWhite hover:bg-transparent hover:text-myWhite" href="#">
+                mounts & grips
+            </a>
+        </div>
+    </div>
+    </section> 
+    <!-- two -->
+    <section style="background-image: url(./assets/services-img2-lg.jpg); background-position: center center; background-repeat: no-repeat;" class="hidden lg:block h-[100vh] w-full ">
+        <div class="text-center text-myWhite h-[100vh] flex flex-col justify-center ml-[50%]">
+            <img class="px-5 mx-auto w-[80%]" src="./assets/services-logo2.png" alt="service-logo2">
+
+            <h3 class="text-3xl font-medium mt-8">
+                Your Podcast Starts Here
+            </h3>
+            <p class="text-[rgba(255,255,255,.7)] mt-4 mb-6 text-lg">
+                Our industry-leading range of podcasting equipment offers <br/>everything you need to record a podcast start-to-finish, from <br/>microphones, studio arms and headphones to complete, all-in-one <br/>production studios.
+            </p>
+            <div class=" mt-10 ">
+                <a class="uppercase px-8 py-2 border-2 border-myWhite text-myBlack text-lg rounded-3xl font-semibold bg-myWhite hover:bg-transparent hover:text-myWhite" href="#">
+                    explore the range
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- three  -->
+    <section style="background-image: url(./assets/services-img3-lg.jpg); background-position: center center; background-repeat: no-repeat;" class="hidden lg:block h-[100vh] w-full ">
+        <div class="text-center py-5 text-myBlack h-[100vh] flex flex-col justify-center items-center mr-[50%]">
+            <img class="w-[80%] px-5" src="./assets/service-logo3.svg" alt="service-logo3">
+
+            <h3 class="text-3xl font-medium mt-8">
+                The Most Powerful Wireless Mic Ever
+            </h3>
+            <p class="text-[rgba(0,0,0,.7)] mt-4 mb-6 text-lg">
+                The Wireless PRO is the ultimate wireless solution, packed full of <br/>powerful features like 32-bit float, timecode and GainAssist that <br/>offer incredible flexibility for recording pristine audio for your <br/>content.
+            </p>
+            <div class="flex gap-6 justify-center mt-6 items-center">
+                <a class="uppercase text-[rgba(0,0,0,.7)] cursor-pointer" href="#">
+                    learn more <i class="ml-2 fa-solid fa-greater-than"></i>
+                </a>
+                <a class="uppercase px-6 py-2 border-2 border-myBlack text-myWhite text-lg rounded-3xl font-semibold bg-myBlack hover:bg-transparent hover:text-myBlack" href="#">
+                    buy now
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- four  -->
+    <section style="background-image: url(./assets/services-img4-lg.jpg); background-position: center center; background-repeat: no-repeat;" class="hidden lg:block h-[100vh] w-full ">
+        <div class="text-center text-myWhite h-full flex flex-col justify-center ml-[50%]">
+            <img class="w-[80%] mx-auto px-5" src="./assets/service-logo4.svg" alt="service-logo4">
+
+            <h3 class="text-3xl font-medium mt-8">
+                Your New Go-to Studio Mic
+            </h3>
+            <p class="text-[rgba(255,255,255,.7)] mt-4 mb-6 text-lg">
+                The NT1 Signature Series is a workhorse studio condenser<br/>microphone with a warm, silky character, exceptionally low noise <br/>and high SPL handling – ideal in a wide range of studio <br/>applications.
+            </p>
+            <div class="flex gap-6 justify-center mt-6 items-center">
+                <a class="uppercase text-[rgba(255,255,255,.7)] cursor-pointer" href="#">
+                    learn more <i class="ml-2 fa-solid fa-greater-than"></i>
+                </a>
+                <a class="uppercase px-6 py-2 border-2 border-myWhite text-myBlack text-lg rounded-3xl font-semibold bg-myWhite hover:bg-transparent hover:text-myWhite" href="#">
+                    buy now
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- five -->
+    <section style="background-image: url(./assets/services-img5-lg.jpg); background-position: center center; background-repeat: no-repeat;" class="hidden lg:block h-[100vh] w-full ">
+        <div class="text-center  text-myBlack h-full flex flex-col justify-center mr-[50%]">
+            <img class="px-5 w-[80%] mx-auto" src="./assets/service-logo5.svg" alt="service-logo5">
+
+            <h3 class="text-3xl font-medium mt-8">
+                The Perfect Desktop Mount
+            </h3>
+            <p class="text-[rgba(0,0,0,.7)] mt-4 mb-6 text-lg">
+                The DS2 is a compact desktop studio arm that's ideal for perfectly <br/>positioning your microphone, camera, smartphone, light and other <br/>accessories on your desktop.
+            </p>
+            <div class="flex gap-6 justify-center mt-6 items-center">
+                <a class="uppercase text-[rgba(0,0,0,.7)] cursor-pointer" href="#">
+                    learn more <i class="ml-2 fa-solid fa-greater-than"></i>
+                </a>
+                <a class="uppercase px-6 py-2 border-2 border-myBlack text-myWhite text-lg rounded-3xl font-semibold bg-myBlack hover:bg-transparent hover:text-myBlack" href="#">
+                    buy now
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- six -->
+    <section style="background-image: url(./assets/services-img6-lg.jpg); background-position: center center; background-repeat: no-repeat;" class="hidden lg:block h-[100vh] w-full ">
+        <div class="text-center text-myWhite h-full flex flex-col justify-center ml-[50%]">
+            <img class="px-5 w-[60%] mx-auto" src="./assets/service-logo6.svg" alt="service-logo6">
+
+            <h3 class="text-3xl font-medium mt-8">
+                Small Size. Stunning Sound.
+            </h3>
+            <p class="text-[rgba(255,255,255,.7)] mt-4 mb-6 text-lg">
+                The VideoMicro II is an ultra-compact and easy-to-use microphone <br/>that will instantly elevate your camera or smartphone audio, <br/>perfect for filmmaking, content creation, home videos, and >more.
+            </p>
+            <div class="flex gap-6 justify-center mt-6 items-center">
+                <a class="uppercase text-[rgba(255,255,255,.7)] cursor-pointer" href="#">
+                    learn more <i class="ml-2 fa-solid fa-greater-than"></i>
+                </a>
+                <a class="uppercase px-6 py-2 border-2 border-myWhite text-myBlack text-lg rounded-3xl font-semibold bg-myWhite hover:bg-transparent hover:text-myWhite" href="#">
+                    buy now
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- latest from Rode section  -->
+    <section class="mt-5r lg:mt-8 text-center">
+        <div>
+            <h1 class="text-4xl  font-semibold text-[#ad9970]">
+                Latest From The RØDE Blog
+            </h1>
+        </div>
+        <div class="lg:flex lg:flex-row lg:flex-wrap lg:justify-center lg:p-20"> <!--outer-->
+        <!-- first -->
+        <div class="mt-16 px-10 sm:px-16  lg:w-1/2">
+            <h2 class="text-3xl lg:text-[26px] font-medium">
+                Introducing the Interview PRO, Phone <br/>Cage and Magnetic Mount
+            </h2>
+            <img  class="lg:w-full" src="./assets/latest-img1.png" alt="latest-img1">
+            <p class="my-10">
+                Announcing a broadcast-quality wireless handheld <br/>microphone and two premium smartphone filmmaking <br/>accessories.
+            </p>
+            <a class="text-lg font-medium uppercase py-1 px-6 bg-myBlack text-myWhite border-2 border-myBlack hover:bg-myWhite hover:text-myBlack rounded-3xl" href="#">
+                Learn more
+            </a>
+        </div>
+        <!-- second  -->
+        <div class="mt-16 px-10 sm:px-16 lg:w-1/2">
+            <h2 class="text-3xl lg:text-[26px] font-medium">
+                How to Set Default Names for Wireless PRO and Interview PRO Recordings
+            </h2>
+            <img  class="lg:w-full" src="./assets/latest-img2.png" alt="latest-img2">
+            <p class="my-10">
+                The latest version of RØDE Central allows you to set default <br/>file names for Wireless PRO and Interview PRO on-board <br/>recordings.
+            </p>
+            <a class="text-lg font-medium uppercase py-1 px-6 bg-myBlack text-myWhite border-2 border-myBlack hover:bg-myWhite hover:text-myBlack rounded-3xl" href="#">
+                Learn more
+            </a>
+        </div>
+        <!-- third  -->
+        <div class="mt-16 px-10 sm:px-16 lg:w-1/2">
+            <h2 class="text-3xl lg:text-[26px] font-medium">
+                The Best Portable Podcast Setup for <br/>Any Budget
+            </h2>
+            <img class="lg:w-full"  src="./assets/latest-img3.png" alt="latest-img3">
+            <p class="my-10">
+                We cover three portable podcasting setups spanning across a <br/>range of budgets, so you can take your show on the road.
+            </p>
+            <a class="text-lg font-medium uppercase py-1 px-6 bg-myBlack text-myWhite border-2 border-myBlack hover:bg-myWhite hover:text-myBlack rounded-3xl" href="#">
+                Learn more
+            </a>
+        </div>
+        <!-- fourth  -->
+        <div class="mt-16 px-10 sm:px-16 mb-10 lg:w-1/2">
+            <h2 class="text-3xl lg:text-[26px] font-medium">
+                How To Make Your Podcast Sound <br/>More Engaging
+            </h2>
+            <img  class="lg:w-full" src="./assets/latest-img4.png" alt="latest-img4">
+            <p class="my-10">
+                Getting your podcast to stand out in the crowd isn’t easy –<br/> we’ll show you how.
+            </p>
+            <a class="text-lg font-medium uppercase py-1 px-6 bg-myBlack text-myWhite border-2 border-myBlack hover:bg-myWhite hover:text-myBlack rounded-3xl" href="#">
+                Learn more
+            </a>
+        </div>
+    </div>
+    </section>
+    <!-- explore section  -->
+    <section class="text-center mt-28 mb-5 lg:mt-16">
+        <div>
+            <h1 class="text-4xl font-bold text-[rgba(0,0,0,.5)]">
+                Explore The RØDE Range
+            </h1>
+        </div>
+        <div class="mt-8 flex flex-col gap-10 px-10 sm:px-16 lg:px-28 lg:mt-6">
+            <div style=" background:url(./assets/explore-bg1.png); background-size: cover; background-position:center;" class="h-[15vh] lg:h-[45vh] flex justify-center items-center cursor-pointer">
+                <img src="./assets/explore-img1.png" alt="explore img">
+            </div>
+            <div style=" background:url(./assets/explore-bg2.jpg); background-size: cover; background-position:center;" class="h-[15vh] lg:h-[45vh] flex justify-center items-center cursor-pointer">
+                <img src="./assets/explore-img2.png" alt="explore img">
+            </div>
+            <div style=" background:url(./assets/explore-bg3.png); background-size: cover; background-position:center;" class="h-[15vh] lg:h-[45vh] flex justify-center items-center cursor-pointer">
+                <img src="./assets/explore-img3.png" alt="explore img">
+            </div>
+            <div style=" background:url(./assets/explore-bg4.png); background-size: cover; background-position:center;" class="h-[15vh] lg:h-[45vh] flex justify-center items-center cursor-pointer">
+                <img src="./assets/explore-img4.png" alt="explore img">
+            </div>
+        </div>
+    </section>
+    <div class="h-[1px] w-full bg-[rgba(0,0,0,.2)] mb-5">
+    </div>
+    <!-- footer section  -->
+    <footer class="px-16 mt-16 lg:hidden">
+        <div class="flex justify-start gap-4 flex-wrap"> <!--outer-->
+            <div class="flex flex-col gap-2 text-[rgba(0,0,0,.6)]">
+            
+                <h4 class="text-lg font-medium text-myBlack">
+                    Products
+                </h4>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Microphones 
+                </a>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Headphones 
+                </a>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Interfaces and Mixers
+                </a>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Accessories
+                </a>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Apps
+                </a>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Apparel
+                </a>
+            </div>
+            <div class="flex flex-col gap-2 text-[rgba(0,0,0,.6)]">
+                <h4 class="text-lg font-medium text-myBlack">
+                    Service
+                </h4>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Contact RØDE
+                </a>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Support Centre
+                </a>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Warranty
+                </a>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Where to Buy
+                </a>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Authorised Dealers
+                </a>
+            </div>
+            <div class="flex flex-col gap-2 text-[rgba(0,0,0,.6)]">
+                <h4 class="text-lg font-medium text-myBlack">
+                    Company
+                </h4>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    About RØDE
+                </a>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    News and Info
+                </a>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Career Opportunities
+                </a>
+            </div>
+            <div class="flex flex-col gap-2 text-[rgba(0,0,0,.6)]">
+                <h4 class="text-lg font-medium text-myBlack">
+                    Account
+                </h4>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Create Account
+                </a>
+                
+            </div>
+        </div>
+        <div class="text-center my-8 ">
+           
+            <h2 class="text-2xl font-semibold mb-4">
+                Subscribe to our latest news and offers
+            </h2>
+            <a class="capitalize rounded-3xl border-2 border-myBlack hover:bg-myWhite hover:text-myBlack  py-1 px-4 bg-myBlack text-myWhite text-lg font-medium" href="#"> 
+                subscribe
+            </a>
+            <div class="h-[1px] w-full bg-[rgba(0,0,0,.2)] mt-5">
+
+            </div>
+        </div>
+        <div class="w-full">
+            <img class="mx-auto" src="./assets/footer-logo.svg" alt="">
+            <div class="flex justify-center gap-2 my-3">
+                <h6>Privacy Policy</h6>
+                <p>|</p>
+                <h6>Terms & Conditions</h6>
+            </div>
+        </div>
+        <div class="flex justify-between gap-6">
+            <i class="text-3xl cursor-pointer fa-brands fa-facebook"></i>
+            <i class="text-3xl cursor-pointer fa-brands fa-x-twitter"></i>
+            <i class="text-3xl cursor-pointer fa-brands fa-instagram"></i>
+            <i class="text-3xl cursor-pointer fa-brands fa-youtube"></i>
+            <i class="text-3xl cursor-pointer fa-brands fa-tiktok"></i>
+            <i class="text-3xl cursor-pointer fa-solid fa-message"></i>
+            <i class="text-3xl cursor-pointer fa-brands fa-discord"></i>
+        </div>
+        <div class="text-center my-6">
+            <p>
+                &copy; 2024 RØDE All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+    <!-- footer-for large screens  -->
+    <footer class="hidden px-28 mt-16 lg:block">
+        <div class="flex justify-between gap-6">
+            <div>
+            <img class="my-full" src="./assets/footer-logo.svg" alt="">
+            </div>
+         <div class="flex justify-center flex-wrap gap-10"> 
+            <div class="flex flex-col gap-2 text-[rgba(0,0,0,.6)]">
+            
+                <h4 class="text-lg font-medium text-myBlack">
+                    Products
+                </h4>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Microphones 
+                </a>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Headphones 
+                </a>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Interfaces and Mixers
+                </a>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Accessories
+                </a>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Apps
+                </a>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Apparel
+                </a>
+            </div>
+            <div class="flex flex-col gap-2 text-[rgba(0,0,0,.6)]">
+                <h4 class="text-lg font-medium text-myBlack">
+                    Service
+                </h4>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Contact RØDE
+                </a>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Support Centre
+                </a>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Warranty
+                </a>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Where to Buy
+                </a>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Authorised Dealers
+                </a>
+            </div>
+            <div class="flex flex-col gap-2 text-[rgba(0,0,0,.6)]">
+                <h4 class="text-lg font-medium text-myBlack">
+                    Company
+                </h4>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    About RØDE
+                </a>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    News and Info
+                </a>
+                <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                    Career Opportunities
+                </a>
+                <div class="flex flex-col gap-2 text-[rgba(0,0,0,.6)]">
+                    <h4 class="text-lg font-medium text-myBlack">
+                        Account
+                    </h4>
+                    <a href="#" class="hover:text-[rgba(0,0,0,.2)]">
+                        Create Account
+                    </a>
+                </div>
+            </div>
+      
+          </div>
+          <div class="text-right">
+            <h2 class="text-3xl font-semibold mb-4">
+                Subscribe to our latest <br/>news and offers
+            </h2>
+            <a class="capitalize rounded-3xl border-2 border-myBlack hover:bg-myWhite hover:text-myBlack  py-1 px-4 bg-myBlack text-myWhite text-lg font-medium" href="#"> 
+                subscribe
+            </a>
+          </div>
+        </div>
+        <div class="h-[1px] w-full bg-[rgba(0,0,0,.2)] mt-5">
+
+        </div>
+        <div class="flex justify-between my-10"> <!--outer-->
+            <div>
+                <p>
+                    &copy; 2024 RØDE All Rights Reserved.
+                </p>
+            </div>
+            <div class="flex gap-3">
+                <h6>Privacy Policy</h6>
+                <p>|</p>
+                <h6>Terms & Conditions</h6>
+            </div>
+            <div class="flex gap-4">
+                <i class="text-2xl cursor-pointer fa-brands fa-facebook"></i>
+                <i class="text-2xl cursor-pointer fa-brands fa-x-twitter"></i>
+                <i class="text-2xl cursor-pointer fa-brands fa-instagram"></i>
+                <i class="text-2xl cursor-pointer fa-brands fa-youtube"></i>
+                <i class="text-2xl cursor-pointer fa-brands fa-tiktok"></i>
+                <i class="text-2xl cursor-pointer fa-solid fa-message"></i>
+                <i class="text-2xl cursor-pointer fa-brands fa-discord"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
